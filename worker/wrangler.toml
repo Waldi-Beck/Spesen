@@ -1,0 +1,15 @@
+# Cloudflare Worker: KI-Dienst für die QPS Spesen-App
+# Einrichten:  cd worker && npx wrangler login && npx wrangler deploy
+# Secrets:     npx wrangler secret put ANTHROPIC_API_KEY
+#              npx wrangler secret put APP_CODE
+name = "qps-spesen-ki"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+
+[vars]
+# Modell für das Auslesen. Günstiger, etwas weniger genau: "claude-haiku-5-5"
+MODEL = "claude-sonnet-5-5"
+# Nur diese Adressen dürfen den Dienst nutzen (kommagetrennt). Beispiel:
+# Lokale App-Adressen für `npm run dev`. Vor einem Deploy um die echte
+# GitHub-Pages-Adresse ergänzen und nicht auf "*" setzen.
+ALLOWED_ORIGINS = "http://localhost:5174,http://127.0.0.1:5174,http://localhost:5173,http://127.0.0.1:5173"

@@ -1,0 +1,30 @@
+{
+  "name": "qps-spesen-app",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "QPS Spesen-App: Belege fotografieren, automatisch auslesen, Spesenabrechnung (Excel + PDF mit Belegen) erzeugen und senden",
+  "scripts": {
+    "dev": "vite --host",
+    "dev:ki": "wrangler dev --config worker/wrangler.toml --ip 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host",
+    "test": "vitest run",
+    "beispiel": "node scripts/beispiel-export.mjs"
+  },
+  "dependencies": {
+    "dexie": "^4.4.6",
+    "dexie-react-hooks": "^1.1.7",
+    "exceljs": "^4.4.0",
+    "pdf-lib": "^1.17.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "vite": "^5.4.21",
+    "vite-plugin-pwa": "^0.20.5",
+    "vitest": "^2.1.9",
+    "wrangler": "^4.151.1"
+  }
+}

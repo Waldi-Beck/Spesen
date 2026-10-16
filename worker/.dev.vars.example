@@ -1,0 +1,3 @@
+# Für lokalen Test (npx wrangler dev): als .dev.vars kopieren – nie ins Git!
+ANTHROPIC_API_KEY=sk-ant-...
+APP_CODE=ein-langer-zufaelliger-code
